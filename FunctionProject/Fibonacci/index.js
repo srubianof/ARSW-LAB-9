@@ -10,34 +10,33 @@ module.exports = async function (context, req) {
 
     if (nth < 0)
         throw 'must be greater than 0'
-    else if (nth === 0)
-        answer = nth_2
-    else if (nth === 1)
-        answer = nth_1
     else {
-        table = Array.from({length: nth+1}, (x) => bigInt.zero);
         answer = fiboDP(nth)
     }
     context.res = {
         body: answer.toString()
     };
 }
-let table = null;
-function fiboDP(n){   
-    if (n === 0){
-      return bigInt.zero;
-    }
-    else if (n === 1){
-        return bigInt.one;
-    }
-    else if((table[n] !== bigInt.zero)){
+let table = {};
+function fiboDP(n){  
+    
+    if (n in table){
         return table[n];
     }
+    
+    if (n === 0){
+        table[n] = 0;
+        return bigInt.zero;
+    }
+    else if (n === 1){
+        table[n] = 0;
+        return bigInt.one;
+    }
     else{
-      if (table[n-1] === 0 ){
+      if (table[n-1] === bigInt.zero ){
             table[n-1] = fiboDP(n-1);
       }
-      if (table[n-2] === 0 ){
+      if (table[n-2] === bigInt.zero ){
             table[n-2] = fiboDP(n-2);
       }
     }
