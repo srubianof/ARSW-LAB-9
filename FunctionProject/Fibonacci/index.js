@@ -25,24 +25,18 @@ function fiboDP(n){
     }
     
     if (n === 0){
-        table[n] = 0;
+        table[n] = bigInt.zero;
         return bigInt.zero;
     }
     else if (n === 1){
-        table[n] = 0;
+        table[n] = bigInt.one;
         return bigInt.one;
     }
     else{
-      if (table[n-1] === bigInt.zero ){
-            table[n-1] = fiboDP(n-1);
-      }
-      if (table[n-2] === bigInt.zero ){
-            table[n-2] = fiboDP(n-2);
-      }
+        table[n] = fiboDP(n-1).add(fiboDP(n-2))
     }
-    console.log(table[n-1]+(table[n-2]))
-    console.log(table[n-1].add(table[n-2]));
-    return table[n-1].add(table[n-2]);
+
+    return table[n];
     
 }
 
