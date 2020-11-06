@@ -14,14 +14,29 @@ module.exports = async function (context, req) {
     else if (nth === 1)
         answer = nth_1
     else {
-        for (var i = 0; i < nth - 1; i++) {
-            answer = nth_2.add(nth_1)
-            nth_2 = nth_1
-            nth_1 = answer
-        }
+        answer = fiboDP(nth)
     }
 
     context.res = {
         body: answer.toString()
     };
 }
+
+function fiboDP(n){
+    let table = Array.from({length: n}, (x) => 0);
+    if (n <= 1){
+      return n;
+    }
+    else{
+      if (table[n-1] === 0 ){
+            table[n-1] = fiboDP(n-1);
+      }
+      if (table[n-2] === 0 ){
+            table[n-2] = fiboDP(n-2);
+      }
+    }
+    return table[n-1] + table[n-2];
+    
+}
+
+
