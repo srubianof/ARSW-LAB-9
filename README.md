@@ -54,14 +54,12 @@ Se obtuvieron los siguientes resultados:
     Se probó la función varias veces, se probó con el fibonacci de 16000 antes y después de los 5 minutos:
     
 ![](https://media.discordapp.net/attachments/742236419757703229/775560077746241546/Screen_Shot_2020-11-06_at_7.14.25_PM.png?width=790&height=471)
-
     ![](https://media.discordapp.net/attachments/742236419757703229/775560074365894696/Screen_Shot_2020-11-06_at_7.22.25_PM.png?width=790&height=471)
     
-    Como se evidencia anteriormente, luego de los 5 minutos toma una mayor cantidad de tiempo en realizarse la petición.
-    
-    Aquí el resultado de las pruebas con los valores anteriores:
-    
-    ![](https://media.discordapp.net/attachments/742236419757703229/775558321360863239/Screen_Shot_2020-11-06_at_7.13.53_PM.png?width=347&height=471)
+   Como se evidencia anteriormente, luego de los 5 minutos toma una mayor cantidad de tiempo en realizarse la petición.
+   Aquí el resultado de las pruebas con los valores anteriores:
+   
+   ![](https://media.discordapp.net/attachments/742236419757703229/775558321360863239/Screen_Shot_2020-11-06_at_7.13.53_PM.png?width=347&height=471)
 
 **Preguntas**
 
@@ -86,7 +84,7 @@ Se obtuvieron los siguientes resultados:
     
         Ventajas: 
         * Instancias permanentemente semiactivas para evitar cualquier inicio en frío
-        Conectividad de red virtual
+        * Conectividad de red virtual
         * Duración de la ejecución ilimitada (60 minutos garantizados)
         * Tamaños de la instancia Prémium (un núcleo, dos núcleos y cuatro instancias de núcleo)
         * Precios más previsibles
